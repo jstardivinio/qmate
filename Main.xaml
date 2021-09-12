@@ -7,7 +7,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1088,4437</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1088,4474</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="30">
@@ -73,18 +73,17 @@
       <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="672,4332" sap2010:WorkflowViewState.IdRef="Sequence_13">
+  <Sequence sap:VirtualizedContainerService.HintSize="672,4329" sap2010:WorkflowViewState.IdRef="Sequence_13">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="630,4240" sap2010:WorkflowViewState.IdRef="TryCatch_5">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="630,4237" sap2010:WorkflowViewState.IdRef="TryCatch_5">
       <TryCatch.Try>
-        <Sequence sap:VirtualizedContainerService.HintSize="592,4013" sap2010:WorkflowViewState.IdRef="Sequence_1">
+        <Sequence sap:VirtualizedContainerService.HintSize="592,4010" sap2010:WorkflowViewState.IdRef="Sequence_1">
           <Sequence.Variables>
             <Variable x:TypeArguments="sd:DataTable" Name="accounts" />
             <Variable x:TypeArguments="x:String" Default="https://auth.udacity.com/sign-in" Name="login_url" />
@@ -92,11 +91,7 @@
             <Variable x:TypeArguments="sd:DataTable" Name="tyesProjects" />
             <Variable x:TypeArguments="sd:DataTable" Name="jaoProjects" />
             <Variable x:TypeArguments="sd:DataTable" Name="ftProjects" />
-            <Variable x:TypeArguments="x:String" Name="overview_link">
-              <Variable.Default>
-                <Literal x:TypeArguments="x:String">https://mentor-dashboard.udacity.com/queue/overview</Literal>
-              </Variable.Default>
-            </Variable>
+            <Variable x:TypeArguments="x:String" Default="https://mentor-dashboard.udacity.com/queue/overview" Name="overview_link" />
           </Sequence.Variables>
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -116,23 +111,23 @@
               <InArgument x:TypeArguments="x:String">https://auth.udacity.com/sign-in</InArgument>
             </Assign.Value>
           </Assign>
-          <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Chrome Browser" sap:VirtualizedContainerService.HintSize="550,3180" sap2010:WorkflowViewState.IdRef="OpenBrowser_2" Url="[login_url]">
+          <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Chrome Browser" sap:VirtualizedContainerService.HintSize="550,3177" sap2010:WorkflowViewState.IdRef="OpenBrowser_2" Url="[login_url]">
             <ui:OpenBrowser.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="516,3079" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="516,3076" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:InterruptibleWhile DisplayName="While" sap:VirtualizedContainerService.HintSize="474,2987" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+                  <ui:InterruptibleWhile DisplayName="While" sap:VirtualizedContainerService.HintSize="474,2984" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
                     <ui:InterruptibleWhile.Body>
-                      <TryCatch sap:VirtualizedContainerService.HintSize="438,2822" sap2010:WorkflowViewState.IdRef="TryCatch_6">
+                      <TryCatch sap:VirtualizedContainerService.HintSize="438,2819" sap2010:WorkflowViewState.IdRef="TryCatch_6">
                         <TryCatch.Try>
-                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,2595" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,2592" sap2010:WorkflowViewState.IdRef="Sequence_10">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -163,7 +158,6 @@
                                 <InArgument x:TypeArguments="x:String" x:Key="in_loginURL">[out_loginURL]</InArgument>
                               </ui:InvokeWorkflowFile.Arguments>
                             </ui:InvokeWorkflowFile>
-                            <ui:NavigateTo Browser="{x:Null}" DisplayName="Navigate To Udacity Dashboard Overview" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="NavigateTo_1" Url="[overview_link]" />
                             <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Refresh_Account_Queue Workflow File" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_33" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Refresh_Account_Queue.xaml">
                               <ui:InvokeWorkflowFile.Arguments>
                                 <InArgument x:TypeArguments="sd:DataTable" x:Key="in_accountProjects">[bbmProjects]</InArgument>
@@ -185,6 +179,7 @@
                                 <InArgument x:TypeArguments="x:String">[accounts(1)(1).ToString]</InArgument>
                               </Assign.Value>
                             </Assign>
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;Account: &quot; + out_account]" />
                             <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Login Workflow File" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_34" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Mentor_Dashboard_Login.xaml">
                               <ui:InvokeWorkflowFile.Arguments>
                                 <InArgument x:TypeArguments="x:String" x:Key="in_account">[out_account]</InArgument>
@@ -192,7 +187,6 @@
                                 <InArgument x:TypeArguments="x:String" x:Key="in_loginURL">[out_loginURL]</InArgument>
                               </ui:InvokeWorkflowFile.Arguments>
                             </ui:InvokeWorkflowFile>
-                            <ui:NavigateTo Browser="{x:Null}" DisplayName="Navigate To Udacity Dashboard Overview" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="NavigateTo_2" Url="[overview_link]" />
                             <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Refresh_Account_Queue Workflow File" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_35" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Refresh_Account_Queue.xaml">
                               <ui:InvokeWorkflowFile.Arguments>
                                 <InArgument x:TypeArguments="sd:DataTable" x:Key="in_accountProjects">[tyesProjects]</InArgument>
@@ -214,6 +208,7 @@
                                 <InArgument x:TypeArguments="x:String">[accounts(2)(1).ToString]</InArgument>
                               </Assign.Value>
                             </Assign>
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Trace" Message="[&quot;Account: &quot; + out_account]" />
                             <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Login Workflow File" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_36" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Mentor_Dashboard_Login.xaml">
                               <ui:InvokeWorkflowFile.Arguments>
                                 <InArgument x:TypeArguments="x:String" x:Key="in_account">[out_account]</InArgument>
@@ -221,7 +216,6 @@
                                 <InArgument x:TypeArguments="x:String" x:Key="in_loginURL">[out_loginURL]</InArgument>
                               </ui:InvokeWorkflowFile.Arguments>
                             </ui:InvokeWorkflowFile>
-                            <ui:NavigateTo Browser="{x:Null}" DisplayName="Navigate To Udacity Dashboard Overview" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="NavigateTo_3" Url="[overview_link]" />
                             <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Refresh_Account_Queue Workflow File" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_37" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Refresh_Account_Queue.xaml">
                               <ui:InvokeWorkflowFile.Arguments>
                                 <InArgument x:TypeArguments="sd:DataTable" x:Key="in_accountProjects">[jaoProjects]</InArgument>
@@ -243,6 +237,7 @@
                                 <InArgument x:TypeArguments="x:String">[accounts(3)(1).ToString]</InArgument>
                               </Assign.Value>
                             </Assign>
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Trace" Message="[&quot;Account: &quot; + out_account]" />
                             <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Login Workflow File" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_38" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Mentor_Dashboard_Login.xaml">
                               <ui:InvokeWorkflowFile.Arguments>
                                 <InArgument x:TypeArguments="x:String" x:Key="in_account">[out_account]</InArgument>
@@ -250,7 +245,6 @@
                                 <InArgument x:TypeArguments="x:String" x:Key="in_loginURL">[out_loginURL]</InArgument>
                               </ui:InvokeWorkflowFile.Arguments>
                             </ui:InvokeWorkflowFile>
-                            <ui:NavigateTo Browser="{x:Null}" DisplayName="Navigate To Udacity Dashboard Overview" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="NavigateTo_4" Url="[overview_link]" />
                             <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Refresh_Account_Queue Workflow File" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_39" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Refresh_Account_Queue.xaml">
                               <ui:InvokeWorkflowFile.Arguments>
                                 <InArgument x:TypeArguments="sd:DataTable" x:Key="in_accountProjects">[ftProjects]</InArgument>
